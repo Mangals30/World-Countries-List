@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>World Countries Data</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" >
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <div class="container">
+    <header id="countries">
+        <h2 class="heading">World Countries List</h2>
+        <h4 class="subtitle">Total Number of countries: <span class="no-of-count"></span></h4>
+        <h4 class="search-message"> <span id="number"></span> countries satisfied the search criteria</h4> 
+        <div class="error-message"></div>
+        <div class="search-buttons">
+        <button class="starts-with" value = "start">STARTING WORD</button>
+        <button class="includes" value="include">SEARCH WITH ANY WORD</button>
+        <button class="sort" value="sort">
+            <i class="fas fa-exchange-alt" value = "sort"></i>
+        </button>
+        </div>
+        <input type="text" class="country-search" placeholder="Search any country">
+    </header> 
+    <main>
+        <div class="wrapper">
+            <div class="coutries-container"></div>
+        </div>
+    </main>
+</div>
+    <script src="https://kit.fontawesome.com/ce3e7ed90f.js" crossorigin="anonymous"></script>
+    <script src="./countries.js"></script>
+    <script src="./main.js"></script>
+
+</body>
+
+</html>
