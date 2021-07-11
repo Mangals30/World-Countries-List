@@ -2,41 +2,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>World Countries Data</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" >
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Countries</title>
+  <link rel="shortcut icon" href="./images/world.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/mobile.css">
 </head>
 
 <body>
-    <div class="container">
-    <header id="countries">
-        <h2 class="heading">World Countries List</h2>
-        <h4 class="subtitle">Total Number of countries: <span class="no-of-count"></span></h4>
-        <h4 class="search-message"> <span id="number"></span> countries satisfied the search criteria</h4> 
-        <div class="error-message"></div>
-        <div class="search-buttons">
-        <button class="starts-with" value = "start">STARTING WORD</button>
-        <button class="includes" value="include">SEARCH WITH ANY WORD</button>
-        <button class="sort" value="sort">
-            <i class="fas fa-exchange-alt" value = "sort"></i>
-        </button>
-        </div>
-        <input type="text" class="country-search" placeholder="Search any country">
-    </header> 
-    <main>
-        <div class="wrapper">
-            <div class="coutries-container"></div>
-        </div>
-    </main>
-</div>
-    <script src="https://kit.fontawesome.com/ce3e7ed90f.js" crossorigin="anonymous"></script>
-    <script src="./countries.js"></script>
-    <script src="./main.js"></script>
-
+  <header class="header">
+    <div class="wrapper">
+      <div class="header-text"></div>
+      <h1>WORLD COUNTRIES LIST</h1>
+      <p class="mgn-btn">Total Number Of Countries: <span class="total"></span></p>
+      <p class="mgn-btn message">Countries <span class="status"></span> <span class="input-word"></span> are <span
+          class="count"></span></p>
+      <div class="buttons mgn-btn">
+        <button class="btn starting-word">starting word</button>
+        <button class="btn search-word">search with any word</button>
+        <button class="btn sort"><i class="fas fa-sort-alpha-up"></i></button>
+      </div>
+      <div class="search mgn-btn">
+        <input type="text" name="search-input" class="search-input" placeholder="Search Country...">
+        <button class="btn search-icon"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+    </div>
+  </header>
+  <section class="countries">
+    <div class="wrapper">
+      <div class="countries-grid"></div>
+    </div>
+  </section>
+  <script src="./js/countries.js"></script>
+  <script src="./js/function.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
