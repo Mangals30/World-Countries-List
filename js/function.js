@@ -76,7 +76,12 @@ const searchWord = (obj) => {
   } = obj
   countriesGrid.innerHTML = ''
   let resultCountries = getResultCountries(statusText, countries, word, sortBtn, sortClicked, asc)
-  getMessage(resultCountries, message, status, inputWord, count, statusText, word)
+  if (word.trim().length == 0) {
+    message.style.display = 'none'
+  } else {
+    getMessage(resultCountries, message, status, inputWord, count, statusText, word)
+  }
+
 
   for (const country of resultCountries) {
     createDiv(resultCountries, country)
