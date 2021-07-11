@@ -1,0 +1,161 @@
+:root {
+  --bg-color: #feffe3;
+  --primary-color: #895be6;
+  --secondary-color: #581cb8;
+  --text-color: #f0f1f1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.4;
+  background: black;
+  color: var(--text-color);
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.mgn-btn {
+  margin-bottom: 1rem;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  background: var(--primary-color);
+  transition: all 0.5s ease-in-out;
+  border-radius: 5px;
+  margin-left: 0.5rem;
+}
+
+.btn:hover {
+  background: var(--secondary-color);
+}
+
+.header {
+  position: relative;
+  height: 40vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: url('../images/globe.jpg') no-repeat center center/cover;
+  opacity: 0.4;
+  z-index: -2;
+}
+
+.header-text {
+  z-index: 10;
+  color: #fff;
+  padding: 1rem;
+}
+
+.header p {
+  font-size: 1.2rem;
+}
+
+.search,
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input {
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  border: none;
+  width: 100%;
+}
+
+.search-input:focus {
+  outline: 0;
+}
+
+.search-icon {
+  background: transparent;
+  font-size: 1.5rem;
+  padding: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.search-icon:hover {
+  background: transparent;
+  color: var(--primary-color);
+}
+
+.countries {
+  background: var(--bg-color);
+  min-height: 100vh;
+}
+
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1rem;
+}
+
+.country {
+  position: relative;
+  background: #333;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.country::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: url('../images/map.jpg') no-repeat center center/cover;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.country h3 {
+  color: #fff;
+  z-index: 5;
+}
+
+.message {
+  display: none;
+  font-style: italic;
+}
+
+.input-word {
+  color: red;
+}
+
+.count {
+  color: green;
+}
